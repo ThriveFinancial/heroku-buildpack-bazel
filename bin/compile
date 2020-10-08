@@ -94,7 +94,7 @@ bash "${BAZEL_INSTALLER}" \
   --bin="${BASE_PATH}/binary" | indent
 echo "-----> Installing Bazel: complete"
 
-BAZEL_BUILD_FLAGS="--spawn_strategy=standalone --genrule_strategy=standalone --explain=${BUILD_DIR}/bazel_explain.log --verbose_explanations"
+BAZEL_BUILD_FLAGS="--spawn_strategy=standalone --genrule_strategy=standalone --incompatible_strict_action_env --explain=${BUILD_DIR}/bazel_explain.log --verbose_explanations"
 
 # Configure Bazel build cache
 BUILD_CACHE_LOCATION=$(cat ${ENV_DIR}/BUILD_CACHE_LOCATION || true)
