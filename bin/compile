@@ -120,7 +120,7 @@ echo "-----> Building binary at $BAZEL_BUILD_PATH"
 
 BAZEL="${BASE_PATH}/bin/bazel --bazelrc=${BUILD_DIR}/bazel.bazelrc"
 
-
+echo $PATH
 cd $BUILD_DIR
 ${BAZEL} clean
 ${BAZEL} build ${BAZEL_BUILD_PATH}
