@@ -18,7 +18,7 @@
 #   bin/compile <build-dir> <cache-dir> <env-dir>
 #
 # Notes:
-# This script takes the build, cache, and environment directories are arugments.
+# This script takes the build, cache, and environment directories are arguments.
 # Cache is persisted between builds. The full application should be built in the
 # build directory. This is a temporary directory that the Heroku built system
 # will package into a slug with a different path, so symlinks can cause
@@ -48,7 +48,7 @@ echo "-----> BAZEL_BUILD_PATH: ${BAZEL_BUILD_PATH}"
 
 # Check for environment Bazel version. Otherwise provide default.
 if [[ ! -v BAZEL_VERSION ]]; then
-  BAZEL_VERSION="0.23.2"
+  BAZEL_VERSION="4.0.0"
 fi
 
 # install Java 1.8
